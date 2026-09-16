@@ -36,4 +36,3 @@ python 1_first_request/__init__.py
 | --- | --- |
 | `1_first_request/` | First request to the Claude API |
 | `example.py` | Scratch file for experimenting |
-| `.` |
