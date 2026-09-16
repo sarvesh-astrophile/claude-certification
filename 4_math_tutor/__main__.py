@@ -24,13 +24,7 @@ def add_assistant_message(message, content):
     message.append(assistant_message)
 
 
-def chat(messages):
-    system = """
-    You are a patient math tutor.
-    Do not directly answer a student's questions.
-    Guide them to a solution step by step.
-    """
-
+def chat(messages, system=""):
     message = client.messages.create(
         model=model,
         max_tokens=1000,
@@ -41,12 +35,17 @@ def chat(messages):
 
 def main():
     messages = []
+    system = """
+    You are a patient math tutor.
+    Do not directly answer a student's questions.
+    Guide them to a solution step by step.
+    """
     while True:
         user_input = input("> You: ")
         if user_input.lower() == "exit":
             break
         add_user_message(messages, user_input)
-        answer = chat(messages)
+        answer = chat(messages, system)
         add_assistant_message(messages, answer)
         print("---")
         print(f"Assistant: {answer}")
