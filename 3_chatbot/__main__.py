@@ -35,14 +35,16 @@ def chat(messages):
 def main():
     while True:
         messages = []
-        user_input = input("You: ")
+        user_input = input("> You: ")
+        if user_input.lower() == "exit":
+            break
         add_user_message(messages, user_input)
         answer = chat(messages)
         add_assistant_message(messages, answer)
-        print(f"> Assistant: {answer}")
         print("---")
-        if user_input.lower() == "exit":
-            break
+        print(f"Assistant: {answer}")
+        print("---")
+
 
 if __name__ == "__main__":
     main()
