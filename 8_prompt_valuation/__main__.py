@@ -1,11 +1,12 @@
+import ast
 import json
+import re
 from pathlib import Path
+from statistics import mean
+
 from anthropic import Anthropic
 from anthropic._types import omit
 from dotenv import load_dotenv
-from statistics import mean
-import ast
-import re
 
 load_dotenv()
 
@@ -106,7 +107,7 @@ def run_test_case(test_case):
     # TODO: Grading
     model_grade = grade_by_model(test_case, output)
     reasoning = model_grade["reasoning"]
-    model_score = model_grade["score"]
+    model_score = model_grade["model_score"]
     syntax_score = grade_syntax(output, test_case)
 
     return {
