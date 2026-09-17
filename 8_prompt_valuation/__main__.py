@@ -146,7 +146,7 @@ def grade_by_model(test_case, output):
         - "strengths": An array of 1-3 key strengths
         - "weaknesses": An array of 1-3 key areas for improvement
         - "reasoning": A concise explanation of your overall assessment
-        - "score": A number between 1-10
+        - "model_score": A number between 1-10
 
         Respond with JSON. Keep your response concise and direct.
         Example response shape:
@@ -154,7 +154,7 @@ def grade_by_model(test_case, output):
             "strengths": string[],
             "weaknesses": string[],
             "reasoning": string,
-            "score": number
+            "model_score": number
         }}
     """
 
