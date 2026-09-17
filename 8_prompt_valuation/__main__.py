@@ -106,13 +106,15 @@ def run_test_case(test_case):
     # TODO: Grading
     model_grade = grade_by_model(test_case, output)
     reasoning = model_grade["reasoning"]
-    score = model_grade["score"]
+    model_score = model_grade["score"]
+    syntax_score = grade_syntax(output, test_case)
 
     return {
         "output": output,
         "test_case": test_case,
-        "score": score,
-        "reasoning": reasoning
+        "model_score": model_score,
+        "reasoning": reasoning,
+        "syntax_score": syntax_score,
     }
 
 def run_eval(test_cases):
@@ -121,7 +123,7 @@ def run_eval(test_cases):
     for test_case in test_cases:
         results.append(run_test_case(test_case))
 
-    average_score = mean([r["score"] for r in results])
+    average_score = mean([r["model_score"] for r in results])
     print(f"Average score: {average_score}")
     return results
 
