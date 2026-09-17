@@ -1,0 +1,14 @@
+[
+  {
+    "task": "Create a regex pattern that validates AWS S3 bucket names according to AWS naming rules: 3-63 characters long, only lowercase letters, numbers, hyphens, and periods, must start and end with a letter or number, and cannot have consecutive periods",
+    "format": "regex"
+  },
+  {
+    "task": "Write a Python function that parses an AWS ARN (Amazon Resource Name) string and returns a dictionary containing the partition, service, region, account-id, and resource components",
+    "format": "python"
+  },
+  {
+    "task": "Create a JSON object representing an AWS IAM policy that allows read-only access to a specific S3 bucket named 'my-company-data' for objects with the prefix 'reports/'",
+    "format": "json"
+  }
+]
