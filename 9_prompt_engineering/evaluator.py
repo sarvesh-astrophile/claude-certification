@@ -1,6 +1,7 @@
 import json
 import concurrent.futures
 import re
+from pathlib import Path
 from textwrap import dedent
 from statistics import mean
 
@@ -202,7 +203,7 @@ class PromptEvaluator:
         task_description,
         prompt_inputs_spec={},
         num_cases=1,
-        output_file="dataset.json",
+        output_file=Path(__file__).parent / "dataset.json",
     ):
         """Generate test dataset based on task description and save to file"""
         ideas = self.generate_unique_ideas(
@@ -364,8 +365,8 @@ class PromptEvaluator:
         run_prompt_function,
         dataset_file,
         extra_criteria=None,
-        json_output_file="output.json",
-        html_output_file="output.html",
+        json_output_file=Path(__file__).parent / "output.json",
+        html_output_file=Path(__file__).parent / "output.html",
     ):
         """Run evaluation on all test cases in the dataset"""
         with open(dataset_file, "r") as f:

@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "178",
+      "weight": "68",
+      "goal": "Marathon training - maximize carbohydrate intake and energy around 15-mile training run scheduled for 10am",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan covers breakfast, lunch, dinner, and snacks across one full day",
+      "Includes carbohydrate-focused meals with timing strategy around 10am training session",
+      "Provides calorie-dense, compact meal suggestions appropriate for endurance athlete needs",
+      "Formatted as concise 1-day plan (not excessive detail)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-intensity endurance athlete (marathon runner) requiring calorie-dense, carbohydrate-focused nutrition with specific timing around training sessions"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "82 kg",
+      "goal": "Muscle building and strength gains through resistance training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan spans exactly 1 day with 4-5 meals distributed to support muscle recovery",
+      "Protein intake distributed across meals (minimum 30g per meal) totaling 1.6-2.0g per kg of body weight",
+      "Pre and post-workout meals included with appropriate macronutrient timing around resistance training",
+      "Plan is concise and compact (under 300 words) with clear meal times and portion guidance"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength-focused athlete (weightlifter) emphasizing protein distribution, muscle recovery, and meal timing around resistance training"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "78 kg",
+      "goal": "Prepare a 1-day meal plan for afternoon soccer match with quick meals and optimal hydration",
+      "restrictions": "Gluten-free, no tree nuts"
+    },
+    "solution_criteria": [
+      "Meal plan covers breakfast, lunch, pre-match snack, and post-match recovery meal with minimal prep time",
+      "Includes specific hydration strategy with fluid volumes for before, during, and after the afternoon match",
+      "All meals are gluten-free and tree nut-free while supporting energy availability for soccer performance",
+      "Emphasizes easily digestible carbohydrates and appropriate timing to avoid gastrointestinal discomfort during competition"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport-specific athlete (soccer player) balancing hydration, energy availability, and digestive comfort for afternoon competition with minimal preparation time"
+  }
+]

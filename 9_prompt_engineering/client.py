@@ -22,7 +22,6 @@ def chat(messages, system=None, temperature=1.0, stop_sequences=[]):
         "model": model,
         "max_tokens": 1000,
         "messages": messages,
-        "temperature": temperature,
         "stop_sequences": stop_sequences,
     }
 
